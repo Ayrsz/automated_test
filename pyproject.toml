@@ -15,3 +15,15 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+omit = [
+    # Ignore the tests directory
+    "tests/*",
+    # Ignore virtual environments
+    "venv/*",
+    # Ignore a specific file
+    "utils/tirefire.py",
+    # Ignore all __init__.py files
+    "*/__init__.py",
+]
